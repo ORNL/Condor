@@ -1,0 +1,11 @@
+{
+    "shape": {
+        "width_x": 10.0e-6,
+        "width_y": 10.0e-6,
+        "width_z": 10.0e-6
+    },
+    "intensity": {
+        "power": 1200,
+        "efficiency": 1.0
+    }
+}

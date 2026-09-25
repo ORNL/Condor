@@ -1,0 +1,20 @@
+{
+    "output":{
+        "dim": "3D",
+        "noOutput": false,
+        "format": ".csv"
+    },
+    "meltpool": {
+        "radius_check": 250e-6
+    },
+    "quadrature": {
+        "cutoff_peak": 1e-9,
+        "cutoff_t0tl": 1e-2
+    },
+    "compute": {
+        "prefetch_threads": 4
+    },
+    "mpi": {
+        "print": 1
+    }
+}

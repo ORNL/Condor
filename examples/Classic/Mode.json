@@ -1,0 +1,45 @@
+{
+    "Interface": {
+        "settings": {
+            "timestep": 1e-4
+        },
+        "output": {
+            "frequency": 0,
+            "temperature": false
+        },
+        "hooks": {
+            "solidification": {
+                "params":{
+                    "dT_err": 1e-3,
+		            "max_iter": 10
+                },
+                "outputs":{
+                    "G": true,
+                    "G_vector": false,
+                    "V": false
+                }
+            },
+            "meltpool": {
+                "params":{
+
+                },
+                "outputs":{
+                    "MP_Length":true,
+                    "MP_Width":false,
+                    "MP_Depth":false,
+                    "Col_Depth":false
+                }
+            },
+            "cet": {
+                "params":{
+                    "N0": 3e13,
+                    "n": 3,
+                    "a": 1.25e6
+                },
+                "outputs":{
+                    "eqFrac": false
+                }
+            }
+        }
+    } 
+}
