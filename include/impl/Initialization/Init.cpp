@@ -157,7 +157,7 @@ namespace Condor::impl{
 			// Read the beam shape parameters used by the heat-source model.
 			beam.ax = ReadValue<FloatType>(shape, "width_x", (FloatType)0.0, true);
 			beam.ay = ReadValue<FloatType>(shape, "width_y", (FloatType)0.0, true);
-			beam.az = ReadValue<FloatType>(shape, "width_z", (FloatType)0.0, false);
+			beam.az = ReadValue<FloatType>(shape, "width_z", (FloatType)0.0, true);
 
 			// Read the beam power settings before converting them to the runtime form.
 			beam.q = ReadValue<FloatType>(intensity, "power", (FloatType)0.0, true);
@@ -241,8 +241,8 @@ namespace Condor::impl{
 			const json& constants = GetNestedJson(root, "constants", true); // Main material constants block.
 			
 			// Read the thermal constants that control the base material model.
-			material.T_init = ReadValue<FloatType>(constants, "T_init", static_cast<FloatType>(1273.0), false);
-			material.T_liq = ReadValue<FloatType>(constants, "T_liq", static_cast<FloatType>(1610.0), false);
+			material.T_init = ReadValue<FloatType>(constants, "T_init", static_cast<FloatType>(1273.0), true);
+			material.T_liq = ReadValue<FloatType>(constants, "T_liq", static_cast<FloatType>(1610.0), true);
 			material.kon = ReadValue<FloatType>(constants, "k", static_cast<FloatType>(26.6), true);
 			material.cps = ReadValue<FloatType>(constants, "c", static_cast<FloatType>(600.0), true);
 			material.rho = ReadValue<FloatType>(constants, "p", static_cast<FloatType>(7451.0), true);
